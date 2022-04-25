@@ -3,28 +3,28 @@ const mongoose = require("mongoose")
 const foodSchema = mongoose.Schema({
     name:{
         type:String,
-        required:true
+        require:true
     },
     type:{
         type:String,
-        required:true
+        require:true
     },
     time:{
         type:Date,
         default:Date.now()
     },
     ingredients:{
-        type:Array, 
-        require:true
+        type:Array,
+        required:true
     },
     recipe:{
         type:Array,
-        require:true
+        required:true
     }
-}, {
+},{
     timestamps:true
 }
 )
 
-const Food = mongoose.model("Food", foodSchema);
-module.exports =Food;
+const Food = mongoose.model("Food",foodSchema);
+module.exports=Food

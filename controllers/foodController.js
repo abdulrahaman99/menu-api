@@ -1,8 +1,8 @@
-const Food = require("../models/foodschema")
+const Food = require("../models/foodSchema")
 
 //create a menu
 const createFood = (req, res)=>{
-    const newFood =new Food(
+    const newFood = new Food(
         {
             name:req.body.name,
             type:req.body.type,
@@ -20,4 +20,5 @@ const foods = await Food.find();
     res.status(200).json(foods)
 }
 
-module.exports={createFood, getMenu}
+
+module.exports = {createFood, getMenu}
